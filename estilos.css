@@ -618,3 +618,54 @@ footer {
         border: 0;
     }
 }
+.anuncio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00e5ff;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Tamaño del anuncio para pantallas de escritorio */
+@media (min-width: 1024px) {
+    .anuncio {
+        width: 728px;
+        height: 90px;
+    }
+
+    .anuncio-logo img {
+        height: 70px; /* Ajusta el tamaño del logo para escritorio */
+    }
+
+    .anuncio-texto p {
+        font-size: 20px; /* Tamaño de texto en escritorio */
+    }
+
+    .anuncio-boton .btn-descubrir {
+        font-size: 18px; /* Tamaño del botón para escritorio */
+    }
+}
+
+/* Tamaño del anuncio para pantallas móviles */
+@media (max-width: 1023px) {
+    .anuncio {
+        width: 300px;
+        height: 600px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .anuncio-logo img {
+        height: 100px; /* Ajusta el tamaño del logo para móviles */
+    }
+
+    .anuncio-texto p {
+        font-size: 24px; /* Tamaño de texto en móviles */
+    }
+
+    .anuncio-boton .btn-descubrir {
+        font-size: 20px; /* Tamaño del botón para móviles */
+    }
+}
