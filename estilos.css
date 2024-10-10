@@ -586,86 +586,102 @@ footer {
 }
 /* Estilos para computadoras */
 .anuncioaca {
+	width: 728px;
+	height: 90px;
+	display:block;
+	margin: auto
+}
+
+/* Tamaño fijo del anuncio en computadoras (728x90 px) */
+.anuncioaca {
     width: 728px;
     height: 90px;
-    border: 0;
+    margin: 0 auto; /* Centrar el anuncio */
+    display: block;
+    position: relative;
 }
 
-/* Estilos para el contenedor en computadoras */
+/* Imagen que sigue al anuncio */
+.box-contenedor img {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-top: 20px; /* Separar la imagen del anuncio */
+}
+
+/* Contenedor del anuncio e imagen */
 .box-contenedor {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 90px; /* Ajuste a la altura del anuncio en computadoras */
-    padding: 0;
 }
 
-/* Estilos del iframe en computadoras */
+.anuncio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 728px;
+    height: 90px;
+    margin: 20px auto;
+}
+
+.anuncio-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.anuncio-texto {
+    flex: 1;
+    margin: 0 20px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.anuncio-boton a {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.anuncio-boton a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para computadoras */
 .anuncioaca {
     width: 728px;
     height: 90px;
     border: 0;
 }
-
-/* Estilos para dispositivos móviles (pantallas menores de 768px) */
-@media (max-width: 768px) {
-    .box-contenedor {
-        height: 600px; /* Ajusta la altura al tamaño del anuncio en móviles */
-    }
-    .anuncioaca {
-        width: 300px;
-        height: 600px;
-        border: 0;
-    }
-}
-.anuncio {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #00e5ff;
-    color: #fff;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-/* Tamaño del anuncio para pantallas de escritorio */
-@media (min-width: 1024px) {
+@media (max-width: 600px) {
     .anuncio {
-        width: 728px;
-        height: 90px;
-    }
-
-    .anuncio-logo img {
-        height: 70px; /* Ajusta el tamaño del logo para escritorio */
-    }
-
-    .anuncio-texto p {
-        font-size: 20px; /* Tamaño de texto en escritorio */
-    }
-
-    .anuncio-boton .btn-descubrir {
-        font-size: 18px; /* Tamaño del botón para escritorio */
-    }
-}
-
-/* Tamaño del anuncio para pantallas móviles */
-@media (max-width: 1023px) {
-    .anuncio {
-        width: 300px;
+        max-width: 300px;
         height: 600px;
         flex-direction: column;
-        text-align: center;
+        padding: 20px;
     }
 
     .anuncio-logo img {
-        height: 100px; /* Ajusta el tamaño del logo para móviles */
+        max-width: 100px;
+        margin-bottom: 20px;
     }
 
-    .anuncio-texto p {
-        font-size: 24px; /* Tamaño de texto en móviles */
+    .anuncio-texto {
+        margin-bottom: 20px;
+        font-size: 18px;
     }
 
-    .anuncio-boton .btn-descubrir {
-        font-size: 20px; /* Tamaño del botón para móviles */
+    .anuncio-boton a {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
     }
 }
