@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelos de Maserati</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+ 
+ 
     <style>
         /* Estilos para el menú desplegable en la barra de navegación */
         .navbar {
@@ -120,6 +123,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -251,6 +255,18 @@
             </div>
         </section>
 
+        <div class="image-row">
+            <a href="maserati f1.webp" data-lightbox="fotos" title="Maserati F1 Car">
+                <img src="maserati f1.webp" class="gallery-image">
+            </a>
+            <a href="maserati team.jpg" data-lightbox="fotos" title="Maserati F1 Team">
+                <img src="maserati team.jpg" class="gallery-image">
+            </a>
+            <a href="maserati car.webp" data-lightbox="fotos" title="Maserati F1 Car Perspective">
+                <img src="maserati car.webp" class="gallery-image">
+            </a>
+        </div>
+        
         <section id="comparacion" class="comparacion">
             <h2>Comparación de Modelos</h2>
             <div class="comparison-table">
@@ -336,6 +352,6 @@
             }
         });
     </script>
-    
+    <script src="js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
