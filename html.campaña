@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción de mi sitio web</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
+        <tr>
+            <td align="center" style="padding: 20px;">
+                <h1 style="color: #333333; margin: 0; font-size: 24px;">¡Bienvenido a Nuestro Sitio Web!</h1>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding: 10px;">
+                <img src="https://tuservidor.com/imagenes/logo.png" alt="Logo del Sitio" style="width: 100px; height: auto;">
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 20px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td width="50%" valign="top" style="padding: 10px;" class="column" style="text-align: center;">
+                            <img src="https://tuservidor.com/imagenes/modelo1.jpg" alt="Imagen Modelo 1" style="width: 100%; height: auto;">
+                            <h2 style="font-size: 18px; color: #333;">Explora Nuestros Modelos</h2>
+                            <p style="font-size: 14px; color: #666;">Descubre los increíbles autos Maserati en nuestra página. ¡No te pierdas nuestras novedades!</p>
+                        </td>
+                        <td width="50%" valign="top" style="padding: 10px;" class="column" style="text-align: center;">
+                            <img src="https://tuservidor.com/imagenes/modelo2.jpg" alt="Imagen Modelo 2" style="width: 100%; height: auto;">
+                            <h2 style="font-size: 18px; color: #333;">Conoce el Maserati Grecale</h2>
+                            <p style="font-size: 14px; color: #666;">El Maserati Grecale es el futuro del lujo y rendimiento. Visita nuestra página para conocer todos los detalles.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding: 20px;">
+                <a href="https://tobiasmontes.github.io/Tobiasmontes.github.io-/index.html" style="background-color: #007BFF; color: #ffffff; text-decoration: none; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Visita nuestro sitio</a>
+            </td>
+        </tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; margin: 20px auto; background-color: #f4f4f4;">
+        <tr>
+            <td style="padding: 20px; text-align: center; font-size: 12px; color: #999999;">
+                &copy; 2024 Mi Empresa. Todos los derechos reservados.<br>
+                <a href="#" style="color: #999999; text-decoration: none;">Darse de baja</a> | 
+                <a href="#" style="color: #999999; text-decoration: none;">Política de privacidad</a>
+            </td>
+        </tr>
+    </table>
+
+    <style>
+        /* Estilos adicionales para adaptar a móviles */
+        @media only screen and (max-width: 600px) {
+            .column {
+                display: block;
+                width: 100% !important;
+            }
+        }
+    </style>
+</body>
+</html>

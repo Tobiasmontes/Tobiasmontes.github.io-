@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción de mi sitio web</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+
+    <div style="max-width: 700px; margin: 0 auto; background-color: #ffffff; padding: 20px;">
+        <div style="text-align: center;">
+            <h1 style="color: #333333; margin: 0; font-size: 24px;">¡Bienvenido a Nuestro Sitio Web!</h1>
+        </div>
+        <div style="text-align: center; padding: 10px;">
+            <img src="Maseratilogo.png" alt="Logo del Sitio" style="width: 200px; height: auto;">
+        </div>
+
+        <!-- Estructura para mostrar las imágenes -->
+        <div id="contenedor-imagenes" style="display: flex; flex-direction: column; text-align: center; padding: 10px; flex-flow: wrap;justify-content: center;">
+            <div class="imagen-item" style="width: 50%; min-width: 330px; padding: 10px; box-sizing: border-box;">
+                <img src="modelo1.jpg" alt="Imagen Modelo 1" style="width: 100%; height: auto;">
+                <h2 style="font-size: 18px; color: #333;">Explora Nuestros Modelos</h2>
+                <p style="font-size: 14px; color: #666;">Descubre los increíbles autos Maserati en nuestra página. ¡No te pierdas nuestras novedades!</p>
+            </div>
+            <div class="imagen-item" style="width: 50%; min-width: 330px; padding: 10px; box-sizing: border-box;">
+                <img src="modelo2.jpg" alt="Imagen Modelo 2" style="width: 100%; height: auto;">
+                <h2 style="font-size: 18px; color: #333;">Conoce el Maserati Grecale</h2>
+                <p style="font-size: 14px; color: #666;">El Maserati Grecale es el futuro del lujo y rendimiento. Visita nuestra página para conocer todos los detalles.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; padding: 20px;">
+            <a href="https://tobiasmontes.github.io/Tobiasmontes.github.io-/index.html" style="background-color: #007BFF; color: #ffffff; text-decoration: none; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Visita nuestro sitio</a>
+        </div>
+    </div>
+
+    <div style="max-width: 700px; margin: 20px auto; background-color: #f4f4f4; padding: 20px; text-align: center;">
+        <p style="font-size: 12px; color: #999999;">
+            &copy; 2024 Mi Empresa. Todos los derechos reservados.<br>
+            <a href="#" style="color: #999999; text-decoration: none;">Darse de baja</a> |
+            <a href="#" style="color: #999999; text-decoration: none;">Política de privacidad</a>
+        </p>
+    </div>
+
+    <!-- Estilos dentro del body para ajustar la disposición de las imágenes -->
+    <style>
+        /* Ajustar la disposición de las imágenes según el tamaño de la pantalla */
+        function ajustarDisposicion() {
+            var contenedor = document.getElementById("contenedor-imagenes"); 
+            var items = document.getElementsByClassName("imagen-item");
+
+            if (window.innerWidth >= 768) {
+                contenedor.style.flexDirection = "row";
+                for (var i = 0; i < items.length; i++) {
+                    items[i].style.width = "50%"; /* Cada imagen ocupará el 50% del ancho */
+                }
+            } else {
+                contenedor.style.flexDirection = "column";
+                for (var i = 0; i < items.length; i++) {
+                    items[i].style.width = "100%"; /* Cada imagen ocupará el 100% del ancho */
+                }
+            }
+        }
+
+        // Llamar a la función al cargar la página y al redimensionar la ventana
+        window.onload = ajustarDisposicion;
+        window.onresize = ajustarDisposicion;
+    </style>
+
+</body>
+</html>
