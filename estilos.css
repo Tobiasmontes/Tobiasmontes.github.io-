@@ -418,50 +418,37 @@ footer {
     }
 }
 
-/* Estilo general del contenedor del anuncio */
+/* Ajuste del tamaño del logo y el estilo general del anuncio */
 .anuncio-contenedor {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
-    background-color: #f0f0f0;
+    height: 100vh; /* O altura deseada */
+    background-color: #f0f0f0; /* Color de fondo del cuadrante */
 }
 
-/* Anuncio con ajuste de tamaño y disposición */
 .anuncio {
-    background-color: #00edf1; /* Fondo celeste del anuncio */
-    padding: 10px;
+    background-color: #00edf1; /* Fondo del anuncio */
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra para más estética */
+    max-width: 400px; /* Ajusta el ancho máximo del anuncio */
     text-align: center;
-    width: 728px; /* Ancho para escritorio */
-    height: 90px; /* Altura para escritorio */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-/* Estilo para la imagen del logo */
 .anuncio-logo img {
-    width: 100px; /* Tamaño más grande para escritorio */
+    max-width: 150px; /* Ajusta el tamaño del logo dentro del cuadrante */
     height: auto;
 }
 
-/* Texto del anuncio */
-.anuncio-texto {
-    flex: 1;
-    padding: 0 10px;
-}
-
 .anuncio-texto p {
-    font-size: 16px; /* Texto más grande para llenar más espacio */
-    margin: 5px 0;
+    font-size: 24px;
+    margin: 20px 0;
 }
 
-/* Botón del anuncio */
 .anuncio-boton .btn-descubrir {
     text-decoration: none;
-    padding: 10px 15px; /* Botón más grande para ocupar más espacio */
+    padding: 10px 20px;
     background-color: #333;
     color: white;
     border-radius: 5px;
@@ -470,29 +457,4 @@ footer {
 
 .anuncio-boton .btn-descubrir:hover {
     background-color: #555;
-}
-
-/* Estilos para dispositivos móviles (300x600) */
-@media (max-width: 768px) {
-    .anuncio {
-        width: 300px; /* Ancho para móviles */
-        height: 600px; /* Altura para móviles */
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 20px; /* Aumenta el padding en móviles */
-    }
-
-    .anuncio-logo img {
-        width: 150px; /* Tamaño mayor en móviles para ocupar más espacio */
-    }
-
-    .anuncio-texto p {
-        font-size: 24px; /* Texto más grande en móviles */
-        margin: 15px 0;
-    }
-
-    .anuncio-boton .btn-descubrir {
-        padding: 15px 25px; /* Botón más grande en móviles */
-        font-size: 18px;
-    }
 }
