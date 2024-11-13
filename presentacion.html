@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación de Maserati - Pantalla Completa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .slide-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .slide {
+            width: 100%;
+            height: 100vh;
+            padding: 40px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .active {
+            opacity: 1;
+        }
+        .slide h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .slide p {
+            font-size: 1.2em;
+            max-width: 800px;
+        }
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .navigation button {
+            padding: 15px 25px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .navigation button:disabled {
+            background-color: #aaa;
+        }
+        img {
+            max-width: 100%;
+            max-height: 70%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <h2>Bienvenido a la Presentación de Maserati</h2>
+            <p>Explora los modelos de Maserati y conoce las características de cada uno.</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <h2>Modelos Disponibles</h2>
+            <ul>
+                <li>Maserati Grecale</li>
+                <li>Maserati Levante</li>
+                <li>Maserati Quattroporte</li>
+                <li>Maserati Ghibli</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <h2>Detalles del Maserati Grecale</h2>
+            <p>El Maserati Grecale ofrece un diseño elegante, interior lujoso, y tecnología avanzada.</p>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <h2>Maserati F1</h2>
+            <p>Explora el posible auto de Formula 1 de Masserati, en el equipo de Haas</p>
+            <img src="maserati f1.webp.jpg" alt="Maserati modelo 1">
+        </div>
+
+        <!-- Navegación -->
+        <div class="navigation">
+            <button id="prev" onclick="changeSlide(-1)">Anterior</button>
+            <button id="next" onclick="changeSlide(1)">Siguiente</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));  // Elimina la clase 'active' de todas las diapositivas
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');  // Añade 'active' a la diapositiva actual
+            document.getElementById('prev').disabled = currentSlide === 0;
+            document.getElementById('next').disabled = currentSlide === slides.length - 1;
+        }
+
+        function changeSlide(step) {
+            const newSlide = currentSlide + step;
+            if (newSlide >= 0 && newSlide < slides.length) {
+                showSlide(newSlide);
+            }
+        }
+
+        document.getElementById('prev').disabled = true;  // Deshabilita el botón "Anterior" en la primera carga
+    </script>
+</body>
+</html>
